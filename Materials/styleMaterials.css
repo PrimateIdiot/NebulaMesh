@@ -1,0 +1,262 @@
+* {
+    z-index: 1;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    overflow-x: hidden;
+    background: linear-gradient(#85c3f3, #2da0ee);
+}
+
+body::-webkit-scrollbar {
+    width: 0em;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.cloud-text {
+    z-index: 9;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    filter: blur(3px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.image-container {
+    position: relative;
+    width: 400px;
+    margin: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.moving-background {
+    z-index: -10;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background: url(background.png);
+    background-repeat: repeat;
+    object-fit: cover;
+}
+
+h2,
+h3 {
+    margin: 0;
+    color: #fff;
+}
+
+h2 {
+    font-size: 36px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.userInfo {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    font-size: 30px;
+}
+
+.userInfo button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+}
+
+.loggedInAs {
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.notLoggedIn a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.notLoggedIn a:hover {
+    color: #ffffff;
+}
+
+.colorName {
+    color: #007bff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    object-fit: cover;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#modalImage {
+    width: 600px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.ratio-box {
+    float: right;
+    width: 300px;
+    border: 2px solid #ccc;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    justify-items: left;
+}
+
+.ratio-box input[type="radio"] {
+    display: none;
+}
+
+.radioBoxBox label {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 16px;
+    margin-top: 6px;
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.ratio-box input[type="submit"] {
+    border: none;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 16px;
+    margin-top: 6px;
+    background-color: #ffffff;
+    color: #23eb73;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.ratio-box input[type="submit"]:hover {
+    background-color: #23eb73;
+    color: #ffffff
+}
+
+.ratio-box input[type="radio"]:checked+label {
+    background-color: #007bff;
+    color: #fff;
+}

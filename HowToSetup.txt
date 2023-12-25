@@ -1,0 +1,1 @@
+Import cosmic.sql to database named Cosmic.

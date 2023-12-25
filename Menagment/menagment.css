@@ -1,0 +1,128 @@
+* {
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(#85c3f3, #2da0ee);
+    overflow: hidden;
+}
+
+.order-container::-webkit-scrollbar {
+    width: 0em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.order-box {
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+.order-info {
+    width: 70%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.styled-checkbox {
+    margin-top: 4%;
+    margin-right: 5%;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.styled-checkbox.checked {
+    background-color: #007bff;
+}
+
+.checkmark {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.button-holder {
+    height: 80px;
+}
+
+button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 88%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #007bff
+}
+
+.moving-background {
+    z-index: -10;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background: url(background.png);
+    background-repeat: repeat;
+    object-fit: cover;
+}
+
+.moving-background2 {
+    z-index: -10;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background: url(background2.png);
+    background-repeat: repeat;
+    object-fit: cover;
+}
